@@ -1,0 +1,14 @@
+<%- include("header.ejs")%>
+
+<h1>Update Your profile</h1>
+
+<form id="uploadform" action="/updatepost/<%= post._id%>?" method="post" enctype="multipart/form-data">
+    <input value="<%= post.image%>" type="file" name="image" > <br>
+    <input value="<%= post.title%>" type="text" name="title" placeholder="Enter title"> <br> <br>
+    <input value="<%= post.description%>" type="text" name="description" placeholder="Enter your description"> <br> <br>
+    <button>update post</button>
+</form>
+
+
+
+<%- include("footer.ejs")%>

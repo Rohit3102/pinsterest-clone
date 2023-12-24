@@ -1,0 +1,27 @@
+<%- include("header.ejs")%>
+  <link rel="stylesheet" href="stylesheets/style.css">
+
+
+<div id="main">
+  <div class="container">
+    
+  <h1>Create New Account</h1>
+
+  <form action="/register" method="post">
+    <input type="text" name="username" placeholder="Enter user name"> <br> <br>
+    <input type="text" name="fullname" placeholder="Enter your full name"> <br> <br>
+    <input type="email" name="email" placeholder="Enter your email"> <br> <br>
+    <input type="number" name="contect" placeholder="Enter your contect"> <br> <br>
+    <input type="password" name="password" placeholder="Enter your password"> <br> <br>
+    <button>Create Account</button> <br><br>
+    <h2>Already have An Account</h2> <br>
+    <a href="/login">login</a>
+  </form>
+
+  </div>
+</div>
+
+
+
+
+  <%- include("footer.ejs")%>

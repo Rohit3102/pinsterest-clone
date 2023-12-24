@@ -1,0 +1,9 @@
+<%- include('header') %>
+
+<form action="/forget/<%= id %>" method="post">
+    <input type="number" placeholder="token" name="token">
+    <input type="text" placeholder="new password" name="newpassword" >
+    <button>set password</button>
+</form>
+
+<%- include('footer') %>

@@ -1,0 +1,15 @@
+<%- include("header.ejs")%>
+
+<h1>Update Your profile</h1>
+
+<form id="uploadform" action="/updateprofile/<%= profile._id%>?" method="post" enctype="multipart/form-data">
+    <input value="<%= profile.username%>" type="text" name="username" placeholder="Enter user name"> <br> <br>
+    <input value="<%= profile.fullname%>" type="text" name="fullname" placeholder="Enter your full name"> <br> <br>
+    <input value="<%= profile.email%>" type="email" name="email" placeholder="Enter your email"> <br> <br>
+    <input value="<%= profile.contact%>" type="number" name="contect" placeholder="Enter your contect"> <br> <br>
+    <button>update profile</button>
+</form>
+
+
+
+<%- include("footer.ejs")%>

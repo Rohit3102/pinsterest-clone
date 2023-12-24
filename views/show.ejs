@@ -1,0 +1,43 @@
+<%- include("header.ejs")%>
+
+<link rel="stylesheet" href="/stylesheets/show.css">
+
+<div id="main">
+
+  <nav>
+      <a href="/profile">Profile</a>
+      <a href="/show/posts">My Posts</a>
+      <a href="/feed">Feed</a>
+      <a href="/addpost">Add New Post</a>
+      <a id="logout" href="/logout">Log out</a>
+    </nav>
+
+    <h1>Username: <%= admin.username%></h1>
+    <h1>Your total post <%= user.posts.length%></h1>
+
+    <div class="main">
+      <% user.posts.forEach(function(e, _id){ %>
+        <div class="cards">
+     
+          <div class="img-div">
+            <img height="200px" src="/images/<%= e.postImage%>" alt="">
+          </div>
+   <h1>Title :  <%=e.title%></h1>
+   <h2>Description :  <%=e.description%></h2>
+   <h6>Date: <%= e.date%></h6>
+   <a href="/delete/<%=e._id%>">Delete</a>
+   <a id="del" href="/updatepost/<%= e._id%>">Update</a>
+   
+  </div>
+     <% }) %>
+
+    </div>
+  
+
+
+</div>
+
+
+
+
+<%- include("footer.ejs")%>

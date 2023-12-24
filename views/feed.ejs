@@ -1,0 +1,32 @@
+<%- include("header.ejs")%>
+<link rel="stylesheet" href="/stylesheets/show.css">
+
+
+<nav>
+    <a href="/profile">Profile</a>
+    <a href="/show/posts">My Posts</a>
+    <a href="/feed">Feed</a>
+    <a href="/addpost">Add New Post</a>
+    <a id="logout" href="/logout">Log out</a>
+  </nav>
+
+  <div class="main">
+    <% posts.forEach(function(e){ %>
+      <div class="cards">
+  
+        <div class="img-div">
+          <img height="200px" src="/images/<%= e.postImage%>" alt="">
+        </div>
+        
+        <h3>Title: <%= e.title %></h3>
+        <h3>Description: <%= e.description %></h3>
+        <h2><%= user.username%></h2>
+        
+      </div>
+    <% }) %>
+
+  </div>
+
+
+
+<%- include("footer.ejs")%>

@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(79, 39, 39, 0.307);
+    color: #fff;
+}
+
+nav{
+    width: 100%;
+    background-color: rgb(60, 55, 55);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .6vw 4vw;
+}
+
+#logout{
+    background-color: red;
+    padding: .3vw .8vw;
+    border-radius: .3vw;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2vw;
+}
+
+.profiledata{
+    margin-top: 2vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column  ;
+    gap: 2vw;
+    margin-left: 40vw;
+    padding: 1vw 1.5vw;
+    width: 20%;
+text-align: center;
+    /* height: 30vh; */
+}
+
+.img-div{
+    width: 6.5vw;
+    height: 6.5vw;
+    position: relative;
+}
+
+.img-div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.text-div h3{
+    margin: 1vw;
+}
+
+.text-div a{
+    text-decoration: none;
+    padding: .3vw 1vw;
+    margin-top: 2vw;
+    font-size: 1.2vw;
+    color: #fff;
+    border-radius: .3vw;
+    background-color: salmon;
+}
+
+#uploadfile{
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    padding: .5vw .51vw ;
+    border: none;
+    border-radius: 50%;
+}
+
+.cards{
+    width: 15vw;
+    height: 45vh;
+    background-color: rgb(172, 172, 172);
+    border-radius: 1vw;
+    margin: 1vw;
+}
+
+.img{
+    width: 100%;
+    height: 80%;
+    padding: .3vw;
+    overflow: hidden;
+}
+
+.img img{
+    border-radius: .9vw;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cards h1{
+    font-size: 1.2vw;
+    padding: .6vw;
+}
+
+.cards a{
+    font-size: 1vw;
+    padding: .6vw;
+    text-decoration: none;
+    color: #fff;
+}
+.cards h2{
+    padding: .6vw;
+    font-size: 1.2vw;
+}

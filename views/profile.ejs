@@ -1,0 +1,52 @@
+<%- include("header.ejs")%>
+<link rel="stylesheet" href="stylesheets/profile.css">
+<div class="main">
+
+  <form id="uploadform" hidden action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" >
+    <button>upload</button>
+</form>
+
+<nav>
+  <a href="/profile">Profile</a>
+  <a href="/show/posts">My Posts</a>
+  <a href="/feed">Feed</a>
+  <a href="/addpost">Add New Post</a>
+  <a href="/reset">Reset</a>
+  <a id="logout" href="/logout">Log out</a>
+</nav>
+
+  <div class="profiledata">
+    <div class="img-div">
+
+      <img src="/images/uploads/<%= user?.image %>" alt="">
+      <button id="uploadfile">✏️</button>
+    </div>  
+    <div class="text-div">
+      <h2>@ <%= admin.username %></h2>
+      <h3><%= admin.fullname %></h3>
+      <a href="/updateprofile">Edit Profile</a>
+      
+    </div>
+  </div>
+
+<div class="cards">
+<div class="img">
+  <img src="/images/<%= user?.posts[0]?.postImage%>" alt="">
+</div>
+
+<h2> Your posts "<%= user?.posts?.length%>"</h2>
+<a href="/show/posts">See All</a>
+</div>
+
+
+<script>
+  document.querySelector("#uploadfile").addEventListener("click", function(){
+     document.querySelector("#uploadform input").click();
+  }); 
+
+  document.querySelector("#uploadform input").addEventListener("change" ,function(){
+     document.querySelector("#uploadform").submit();
+  });
+</script>
+  <%- include("footer.ejs")%>
