@@ -1,21 +1,21 @@
 <%- include("header.ejs")%>
-<link rel="stylesheet" href="stylesheets/login.css">
+  <link rel="stylesheet" href="stylesheets/login.css">
 
-<div id="main">
-  <div class="container">
+  <div id="main">
+    <div class="container">
 
-    <h1>Log In Your Account</h1>
-  
-    <form action="/login" method="post">
-      <input type="email" name="email" placeholder="Enter user email"> <br> <br>
-      <input type="password" name="password" placeholder="Enter your password"> <br> <br>
-      <button>log in</button>
-      <a href="/forget">Forget Password</a>
-    </form>
-  
-    <h2>if! You Don't have An  Account </h2> <br>
-    <a id="signin" href="/">signin</a>
+      <h1>Log In Your Account</h1>
+
+      <form action="/login" method="post">
+        <input type="email" name="email" placeholder="Enter user email"> <br> <br>
+        <input type="password" name="password" placeholder="Enter your password"> <br> <br>
+        <button>log in</button>
+        <a href="/forget">Forget Password</a>
+      </form>
+
+      <h2>if! You Don't have An Account </h2> <br>
+      <a id="signin" href="/">signin</a>
+    </div>
   </div>
-</div>
 
   <%- include("footer.ejs")%>

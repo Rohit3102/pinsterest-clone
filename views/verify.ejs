@@ -1,9 +1,15 @@
 <%- include('header') %>
+    <link rel="stylesheet" href="stylesheets/login.css">
 
-<form action="/forget/<%= id %>" method="post">
-    <input type="number" placeholder="token" name="token">
-    <input type="text" placeholder="new password" name="newpassword" >
-    <button>set password</button>
-</form>
 
-<%- include('footer') %>
+    <div id="main">
+        <div class="container">
+            <form action="/forget/<%= id %>" method="post">
+                <input type="number" placeholder="token" name="token">
+                <input type="text" placeholder="new password" name="newpassword">
+                <button>set password</button>
+            </form>
+
+        </div>
+    </div>
+    <%- include('footer') %>

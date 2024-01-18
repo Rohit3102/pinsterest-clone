@@ -1,8 +1,16 @@
 <%- include('header') %>
+<link rel="stylesheet" href="stylesheets/login.css">
 
 
-<form action="/sendmail" method="post">
-    <input type="email" placeholder="Enter email address" name="email"><br>
-    <button>send</button>
-</form>
-<%- include('footer') %>
+<div id="main">
+
+    <div class="container">
+        <h1>Enter your email address to send OTP</h1>
+        <form action="/sendmail" method="post">
+            <input type="email" placeholder="Enter email address" name="email"><br>
+            <button>send</button>
+        </form>
+        
+    </div>
+    </div>
+        <%- include('footer') %>

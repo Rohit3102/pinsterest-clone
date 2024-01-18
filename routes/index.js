@@ -24,7 +24,6 @@ router.post('/register', async function (req, res, next) {
       contect: req.body.contect,
       secret: req.body.secret,
     });
-
     userModel.register(userdata, req.body.password)
       .then(function () {
         passport.authenticate("local")(req, res, function () {
@@ -55,25 +54,27 @@ router.get('/logout', function (req, res, next) {
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
-  }
-  res.redirect('/')
-}
+  };
+  res.redirect('/');
+};
 
 
 router.get('/profile', isLoggedIn, async function (req, res, next) {
   try {
-    const user = await userModel.findOne({ username: req.session.passport.user }).populate("posts")
-    res.render('profile', { admin: req.user, user: user });
-
-  } catch (error) {
+    // const user = await userModel.findOne({ username: req.session.passport.user }).populate("posts")
+    const post = await userModel.findOne(req.user).populate("posts")
+    res.render('profile', { admin: req.user, user:post });
+  } 
+  catch (error) {
     res.send(error);
-  }
+  };
 });
 
 
 router.post('/upload', upload.single('image'), isLoggedIn, async function (req, res, next) {
   try {
-    const user = await userModel.findOne({ email: req.session.passport.user });
+    // const user = await userModel.findOne({ email: req.session.passport.user });
+    const user = await userModel.findOne(req.user)
     user.profileImage = req.file.filename;
     await user.save()
     res.redirect('/profile')
@@ -83,13 +84,13 @@ router.post('/upload', upload.single('image'), isLoggedIn, async function (req, 
   }
 });
 
-router.get('/updateprofile', isLoggedIn, async function (req, res, next) {
+router.get('/updateprofile/:id', isLoggedIn, async function (req, res, next) {
   try {
-    const profile = await userModel.findOne()
-
+    const profile = await userModel.findOne({_id:req.params.id})
     res.render('updateprofile', { admin: req.user, profile });
   } catch (error) {
     res.send(error)
+    console.log(error);
   }
 });
 
@@ -110,21 +111,19 @@ router.get('/addpost', isLoggedIn, function (req, res, next) {
 
 router.post('/createpost', isLoggedIn, upload.single("postImage"), async function (req, res, next) {
   try {
-    // const user = await userModel.findOne(req.user._id);
-    const user = await userModel.findOne({ email: req.session.passport.user });
-
+    const user = await userModel.findOne(req.user)
+    // const user = await userModel.findOne({ email: req.session.passport.user });
     const media = new postModel({
       postImage: req.file.filename,
       title: req.body.title,
       description: req.body.description,
       user: user._id
     });
-
+    console.log(media);
     user.posts.push(media._id);
     await media.save();
     await user.save()
     res.redirect('/profile')
-
   } catch (error) {
     res.send(error)
   }
@@ -132,21 +131,18 @@ router.post('/createpost', isLoggedIn, upload.single("postImage"), async functio
 
 router.get('/show/posts', isLoggedIn, async function (req, res, next) {
   try {
-    const user = await userModel.findOne({ username: req.session.passport.user }).populate("posts")
+    // const user = await userModel.findOne({ username: req.session.passport.user }).populate("posts")
+    const user = await userModel.findOne(req.user).populate("posts")
     res.render('show', { admin: req.user, user: user });
-
   } catch (error) {
     res.send(error);
   }
 });
 
-
-
 router.get('/feed', isLoggedIn, async function (req, res, next) {
   try {
-    const user = await userModel.findOne({ username: req.session.passport.user })
+    const user = await userModel.findOne( req.user)
     const posts = await postModel.find().populate("user")
-
     res.render('feed', { user, posts, admin: req.user });
   } catch (error) {
   }
@@ -156,7 +152,6 @@ router.get('/delete/:id', isLoggedIn, async function (req, res, next) {
   try {
     await postModel.findByIdAndDelete(req.params.id);
     res.redirect('/show/posts');
-
   } catch (error) {
     res.send(error);
   };
@@ -164,23 +159,22 @@ router.get('/delete/:id', isLoggedIn, async function (req, res, next) {
 
 router.get('/updatepost/:id', isLoggedIn, async function (req, res, next) {
   try {
-    const post = await postModel.findOne()
-
-    res.render('updatepost', { admin: req.user, post });
+    const post = await postModel.findOne({_id: req.params.id})
+    res.render('updatepost', { admin: req.user, data:post });
   } catch (error) {
     res.send(error)
+    console.log(error);
   }
 });
 
 router.post('/updatepost/:id', isLoggedIn, upload.single('image'), async function (req, res, next) {
   try {
-    const currentPost = await postModel.findById(req.params.id)
+    const currentPost = await postModel.findById(req.params.id,)
     const post = await postModel.findByIdAndUpdate(req.params.id, {
-      postImage: req.file.filename,
+      postImage: req.file.filename ,
       title: req.body.title ? req.body.title : currentPost.title,
       description: req.body.description ? req.body.description : currentPost.description,
-      
-    })
+    });
     await post.save();
     res.redirect('/show/posts')
   } catch (error) {
