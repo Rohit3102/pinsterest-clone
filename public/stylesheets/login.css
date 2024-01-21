@@ -1,76 +1,208 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-} 
-html,body{
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html,body {
   width: 100%;
   height: 100%;
+background-color: gray;
+font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+background-color: white;
+width: 480px;
+height: 88vh;
+position: absolute;
+margin: auto;
+top: 3%;
+left: 0;
+bottom: 0;
+right: 0;
+border-radius: 10px;
+box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.5);
+}
+.content {
+width: 56%;
+position: absolute;
+margin: auto;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+text-align: center;
 }
 
-#main{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: aquamarine; 
+.img1{
+width: 70px;
+position: relative;
+top: 10px;
 }
-.container{
-  width: fit-content;
-  padding: 2vw 3vw;
-  display: flex;
-  border-radius: 1.21vw;
-  background-color: #fff;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.header {
+font-size: 32px;
+font-weight: 700;
+margin-top: 10px;
+margin-bottom: 10px;
+line-height: 1;
 }
-
-.container h1{
-  text-align: center;
-  margin: 2vw 0;
-  font-size: 2.2vw;
+.detail {
+width: 100%;
+height: 45px;
+margin-top: 2px;
+padding: 15px;
+font-size: 15px;
+color: gray;
+border: 2px solid rgb(218, 214, 214);
+border-radius: 15px;
 }
-
-.container input{
-  width: 20vw;
-  height: 5vh;
-  border-radius: .4vw;
-  padding: 0 1vw;
-  font-size: 1.1vw;
+.detail:focus {
+box-shadow: 0px -7px 3px -2px rgba(15, 91, 231, 0.4),
+0px 7px 3px -2px rgba(15, 91, 231, 0.4),
+7px 0px 3px -2px rgba(15, 91, 231, 0.4),
+-7px 0px 3px -2px rgba(15, 91, 231, 0.4);
+outline: none;
 }
 
-.container button{
-  padding: .3vw 1.6vw;
-  background-color: rgb(0, 85, 255);
-  color: #fff;
-  border: none;
-  font-size: 1.2vw;
-  border-radius: .5vw;
-  margin-top: 1vw;
-  margin-right: 3vw;
+h4 {
+font-size: 13px;
+font-weight: 700;
+position: relative;
+left: -60px;
+margin: 5px;
+}
+
+.btn {
+width: 100%;
+height: 40px;
+border: hidden;
+border-radius: 20px;
+font-size: 18px;
+margin: 5px 0px;
+}
+
+.int {
+background-color: #f30d19;
+margin: 5px 0px;
+color: white;
+font-size: 16px;
+font-weight: 700;
+cursor: pointer;
+}
+.int:hover{
+background-color: #df0812;
+}
+
+.or {
+font-size: 15px;
+font-weight: 700;
+margin: 10px 0px;
+}
+
+.fbk {
+background-color: rgb(9, 128, 240);
+margin: 5px 0px;
+font-size: 16px;
+font-weight: 700;
+}
+.fbk a {
+text-decoration: none;
+color: white;
+text-align: center;
+letter-spacing: 1px;
+}
+.fbk:hover{
+background-color: rgb(8, 110, 206);
+}
+.ggl{
+text-align: center;
+background-color: #ccc;
+}
+.ggl a {
+text-decoration: none;
+color: black;
+font-weight: 600;
+font-size: 16px;
+letter-spacing: 1px;
+}
+.ggl:hover{
+background-color: #a0a0a0;
+}
+
+footer p {
+font-size: 12px;
+margin: 10px;
+opacity: 0.7;
+}
+p:last-child {
+opacity: 1;
+}
+hr {
+width: 50%;
+opacity: 0.4;
+margin-left: 25%;
+}
+.upbtn{
+position: relative;
+top: 50px;
+left: 140px;
+font-size: 16px;
+font-weight: 700;
+text-align: center;
+width: 126px;
+padding: 11px 0px;
+background-color: rgb(241, 236, 236);
+border-radius: 20px;
 }
 
 
-.container h2{
-  text-align: center;
-  margin-top: 2vw;
-  font-size: 1.5vw;
-  font-weight: 300;
+@media(max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  .content {
+    width: 90%;
+  }
+
+  .img1 {
+    width: 50px;
+  }
+
+  .header {
+    font-size: 25px;
+    margin: 6vw;
+  }
+
+  .detail {
+    height: 50px;
+    font-size: 20px;
+    margin:2vw 0;
+  }
+
+  .btn {
+    margin:4vw 0;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  form h4{
+    font-size: 4.5vw;
+  }
+
+  .int,
+  .fbk,
+  .ggl {
+    font-size: 18px;
+  }
+
+  footer p {
+    font-size: 18px;
+  }
+#login{
+  font-size: 6vw;
+  font-weight: 700;
+  line-height: 10vw;
 }
 
-form a{
-  text-decoration: none;
-  font-size: 1.2vw;
-}
-
-#signin{
-  text-decoration: none;
-  font-size: 1.2vw;
-  background-color: red;
-  color: #fff;
-  padding: .3vw 2vw;
-  margin: 1.2vw 0;
-  border-radius: .7vw;
-  font-size: 1.3vw;
-}
+ }

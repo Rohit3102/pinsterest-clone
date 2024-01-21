@@ -6,7 +6,7 @@
 html, body{
     width: 100%;
     height: 100%;
-    background-color: rgb(142, 71, 192);
+    background-color: rgba(142, 71, 192, 0.361);
     color: #fff;
 }
 
@@ -96,3 +96,103 @@ nav a{
     color: black;
     margin-left: 3.5vw;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 5%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 99;
+    color: #111111;
+    background-color: white;
+  }
+  
+  .icon {
+    height: 32px;
+    width: 32px;
+  }
+  
+  .search-icon {
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0px 10px;
+    align-items: center;
+  }
+  
+
+
+li a{
+    font-size: 17px;
+      padding: 15px 15px;
+    text-decoration: none;
+    color: #111111;
+    transition: all ease .5s;
+  }
+  
+  .search-bar {
+    display: flex;
+    width: 50%;
+    padding-left: 25px;
+    align-items: center;
+    background-color: #e9e9e9;
+    border-radius: 32px;
+    height: 50px;
+  }
+  
+  .nav-icon {
+    margin: 0px 8px;
+    height: 28px;
+    width: 28px;
+  }
+  
+  .nav-icons {
+    margin-left: 10px;
+  }
+  
+  .arrow-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  li:hover a{
+    background-color: #111111;
+    color: #e9e9e9;
+    padding: 15px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  img {
+    border-radius: 40px;
+  }
+  
+  img:hover {
+    filter: brightness(0.7);
+    cursor: pointer;
+  }
+
+  #logout{
+    padding: .5vw 1vw;
+    font-size: 17px;
+    text-decoration: none;
+    color: #fff;
+  }

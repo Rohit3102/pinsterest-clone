@@ -27,7 +27,7 @@ router.post('/register', async function (req, res, next) {
     userModel.register(userdata, req.body.password)
       .then(function () {
         passport.authenticate("local")(req, res, function () {
-          res.redirect('/profile')
+          res.redirect('/feed')
         })
       });
   } catch (error) {
@@ -41,7 +41,7 @@ router.get('/login', function (req, res, next) {
 
 router.post('/login', passport.authenticate("local", {
   failureRedirect: '/',
-  successRedirect: '/profile',
+  successRedirect: '/feed',
 }), function (req, res, next) { });
 
 router.get('/logout', function (req, res, next) {

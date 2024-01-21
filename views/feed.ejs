@@ -1,13 +1,25 @@
 <%- include("header.ejs")%>
   <link rel="stylesheet" href="/stylesheets/show.css">
 
-  <nav>
-    <a href="/profile">Profile</a>
-    <a href="/show/posts">My Posts</a>
-    <a href="/feed">Feed</a>
-    <a href="/addpost">Add New Post</a>
-    <a id="logout" href="/logout">Log out</a>
-  </nav>
+  <div class="header">
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pinterest-round-color-icon.png" class="icon pinterest-icon">
+    <ul class="navigation">
+      <li><a href="/profile">Profile</a></li>
+      <li><a href="/show/posts">My Posts</a></li>
+      <li><a href="/addpost">Create Post</a></li>
+      <li><a href="/feed">Feed</a></li>
+    </ul>
+    <div class="search-bar">
+    <!-- add search icon -->
+      <input type="text" placeholder="Search">
+    </div>
+    <div class="nav-icons">
+
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/bell-icon.png" class="icon nav-icon">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/speech-bubble-black-icon.png" class="icon nav-icon">
+      <a id="logout" href="/logout">Log out</a>
+    </div>
+  </div>
 
   <div class="main">
     <% posts.forEach(function(e){ %>
