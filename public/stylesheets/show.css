@@ -6,8 +6,7 @@
 html, body{
     width: 100%;
     height: 100%;
-    background-color: rgba(142, 71, 192, 0.361);
-    color: #fff;
+    color: #000;
 }
 
 .main{
@@ -54,7 +53,7 @@ nav a{
 }
 
 .img-div{
-    border-radius: 1vw;
+    border-radius: .4vw;
     overflow: hidden;
     width: 100%;
     height: 60%;
@@ -182,7 +181,7 @@ li a{
   }
   
   img {
-    border-radius: 40px;
+    border-radius: 10px;
   }
   
   img:hover {
