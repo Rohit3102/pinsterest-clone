@@ -1,27 +1,143 @@
-<%- include("header.ejs")%>
-<link rel="stylesheet" href="stylesheets/login.css">
+<%- include('header')%>
+<link rel="stylesheet" href="stylesheets/signin.css">
 
 
-  <div class="container">
-    <div class="content">
-        <!--pinterest logo-->
-        <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
-        <p class="header">Log in to Your Account</p>
+  <div id="box">
+      <div class="nav1">
+         <a href="/feed"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs8a6QeIKioSq9qdvf6TCev-e-MoaklMjubw&usqp=CAU"
+          alt=""></a>
+         <a href="/feed"> <h1>Pinterest</h1></a>
+      </div>
+      <div class="nav2">
+          <a href="/feed"> <h2>About</h2></a>
+          <a href="feed"><h2>Business</h2></a>
+          <a href="feed"><h2>Blog</h2></a>
 
-      <form action="/register" method="post">
-        <input type="text" name="username" placeholder="Enter user name" class="detail"> <br> <br>
-        <input type="text" name="fullname" placeholder="Enter your full name" class="detail"> <br> <br>
-        <input type="email" name="email" placeholder="Enter your email" class="detail"> <br> <br>
-        <input type="number" name="contect" placeholder="Enter your contect" class="detail"> <br> <br>
-        <input type="password" name="password" placeholder="Enter your password" class="detail"> <br> <br>
-        <button class="btn int">Create Account</button> <br><br>
-      </form>
-      
-      <h2>if! You Don't have An Account </h2> 
-      <a id="login" href="/login">login</a>
-     
-    </div>
+          <a class="sing" href="/signin">Sign in</a>
+          <a class="log" href="/login">Log in </a>
+      </div>
+
   </div>
-  <%- include("footer.ejs")%>
 
 
+  <div id="center">
+      <h1>Get Your Next</h1>
+      <h2>chai time snack idea</h2>
+  </div>
+  <div id="boxes">
+      <div id="img" class="box1"></div>
+      <div id="img" class="box2"></div>
+      <div id="img" class="box3"></div>
+      <div id="img" class="box4"></div>
+      <div id="img" class="box5"></div>
+      <div id="img" class="box6"></div>
+      <div id="img" class="box7"></div>
+
+  </div>
+  <!-- </div> -->
+
+
+  <div id="page2">
+
+      <div class="left">
+          <div id="card" class="card1"></div>
+          <div id="card" class="card2"></div>
+          <div id="card" class="card3"></div>
+          <div id="card" class="card4"></div>
+         <a href="/feed"> <button><i class="ri-search-line"></i>easy chicken dinner</button></a>
+      </div>
+      <div class="right">
+          <a href="/feed"><h2>Here how it's work<i class="ri-arrow-down-s-line"></i></h2></a>
+          <div class="rightbox">
+              <h1>Search for an idea</h1>
+              <p>What do you want to try next? Think<br> of something you’re into—like “easy <br>chicken dinner”—and
+                  see what you<br> find</p>
+              <a href="/feed"><button>Explore</button></a>
+
+          </div>
+      </div>
+  </div>
+
+  <div id="page3">
+      <div class="page2_left">
+          <div class="center2">
+              <h1>Save ideas you like</h1>
+              <p>collect your favourite so you can<br>get back to them later.</p>
+              <a href="/feed"><button>Explore</button></a>
+          </div>
+      </div>
+      <div class="page2_right">
+          <div id="squar" class="square1"></div>
+          <div id="squar" class="square2"></div>
+          <div id="squar" class="square3"></div>
+          <div id="squar" class="square4"></div>
+          <div id="squar" class="square5"></div>
+          <div id="squar" class="square6"></div>
+          <div id="squar" class="square7"></div>
+          <div id="squar" class="square8"></div>
+          <div id="squar" class="square9"></div>
+          <h1>Serve my <br>drink in <br>style</h1>
+          <h2>My <br>scandinavian<br> beedroom</h2>
+          <h3>The deck of<br> my dream</h3>
+          <h4>Our<br> bathroom <br>upgrade</h4>
+      </div>
+  </div>
+  <div id="page4">
+      <div class="leftpart">
+          <div class="leftcenter"> </div>
+          <div class="circle"></div>
+          <p>Scout the city<br>56.7k followers</p>
+      </div>
+      <div class="rightpart">
+          <div id="center1">
+              <h1>See it, make it,<br> try it, do it </h1>
+              <p>The main part of pinterest is descovering<br> new things and idea from people<br> around the world
+              </p>
+              <a href="/feed"><button>Explore</button></a>
+
+          </div>
+      </div>
+  </div>
+  <div id="page5">
+      <div id="book" class="book1"></div>
+      <div id="book" class="book2"></div>
+      <div id="book" class="book3"></div>
+      <div id="book" class="book4"></div>
+      <div id="book" class="book5"></div>
+      <div id="book" class="book6"></div>
+      <div id="book" class="book7"></div>
+      <div id="book" class="book8"></div>
+      <div id="book" class="book9"></div>
+      <div id="book" class="book10"></div>
+      <div id="book" class="book11"></div>
+      <div id="book" class="book12"></div>
+      <div id="book" class="book13"></div>
+      <div id="book" class="book14"></div>
+      <div id="book" class="book15"></div>
+      <div id="book" class="book16"></div>
+      <div id="overlay2"></div>
+      <a href="/feed"><h1>Sign Up to<br>get your<br> ideas</h1></a>
+
+
+
+  </div>
+ <a href="/feed">
+  <div id="last">
+    <p>Terms of service</p>
+    <p>Privacy policy</p>
+    <p>Help</p>
+    <p>iPhone App</p>
+    <p>Android App</p>
+    <p>User</p>
+    <p>Collection</p>
+    <p>Shopping</p>
+    <p>Today</p>
+    <p>Explore</p>
+    <p>Watch</p>
+    <p>Shop</p>
+</div>
+ </a>
+
+
+
+<%- include('footer') %>

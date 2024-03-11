@@ -15,6 +15,10 @@ router.get('/', function (req, res, next) {
   res.render('index', { admin: req.user });
 });
 
+router.get('/signin', function (req, res, next) {
+  res.render('signin', { admin: req.user });
+});
+
 router.post('/register', async function (req, res, next) {
   try {
     let userdata = await new userModel({
@@ -40,7 +44,7 @@ router.get('/login', function (req, res, next) {
 });
 
 router.post('/login', passport.authenticate("local", {
-  failureRedirect: '/',
+  failureRedirect: '/login',
   successRedirect: '/feed',
 }), function (req, res, next) { });
 
@@ -55,7 +59,7 @@ function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
   };
-  res.redirect('/');
+  res.redirect('/login');
 };
 
 

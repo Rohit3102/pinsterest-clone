@@ -21,6 +21,11 @@ html, body{
     margin: 1vw 0;
 }
 
+.main>a{
+  text-decoration: none;
+  color: black;
+}
+
 
 nav{
     width: 100%;

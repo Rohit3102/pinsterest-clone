@@ -1,0 +1,615 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+#box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .7rem 1.4rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav1{
+    display: flex;
+    align-items: center;
+}
+.nav1 img{
+    height: 70px;
+    cursor: pointer;
+}
+
+.nav1 h1{
+    color: #CC0000;
+    font-size: 25px;
+    cursor: pointer;
+}
+.nav2{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav2 h2{
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav2 a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+    border: none;
+}
+
+.sing{
+    padding: .5rem 1.3rem;
+    background-color: #cacaca;
+    cursor: pointer;
+    color: #555555;
+}
+
+.log{
+    background-color: #fb3e3e;
+    cursor: pointer;
+    color: #fff;
+    padding: .5rem 1.3rem;
+
+}
+
+/* #main{
+    width: 100%;
+    /* height: 100%; */
+ */
+ #center{
+    width: 100%;
+ }
+#center h1{
+    text-align: center;
+    padding-top: 4vw;
+    font-size: 4.2rem;
+    word-spacing: 3px;
+    cursor: pointer;
+}
+#center h2{
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(8, 124, 8);
+    cursor: pointer;
+}
+#boxes{
+     width: 100%;
+    height: 50%;
+     background-color: #0ab0ec; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    background: linear-gradient(transparent, transparent, white);
+}
+
+#img{
+    width: 230px;
+    height: 340px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2vw;
+}
+
+.box1{
+    margin-left: -90px;
+    margin-bottom: 10%;
+    background-image: url(https://www.funfoodfrolic.com/wp-content/uploads/2022/07/Mug-Dhokla-Blog.jpg);
+}
+.box2{
+    background-image: url(https://images.unsplash.com/photo-1685985904869-b8b4a852648c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDc3fHhqUFI0aGxrQkdBfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+}
+.box3{
+    margin-top: 210px;
+    background-image: url(https://www.awesomecuisine.com/wp-content/uploads/2007/11/Idli-with-sambar-and-chutney.jpg);
+}
+.box4{
+    margin-top: 400px;
+    background-image: url(https://www.cookwithmanali.com/wp-content/uploads/2020/10/Raj-Kachori-Recipe-500x375.jpg);
+}
+.box5{
+    margin-top: 210px;
+    background-image: url(https://www.cookwithmanali.com/wp-content/uploads/2018/04/Vada-Pav-500x375.jpg);
+}
+.box6{
+    background-image: url(https://plus.unsplash.com/premium_photo-1679746243920-0bddaaf56629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE4MXx4alBSNGhsa0JHQXx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60);
+}
+.box7{
+    margin-right: -100px;
+    margin-bottom: 10%;
+    background-image: url(https://s.pinimg.com/webapp/topRight-d0230035.png);
+}
+
+
+#page2{
+    width: 100%;
+    height: 110%;
+    position: relative;
+    display: flex;
+    background-color: #ffd392;
+}
+
+.left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.right{
+    width: 50%;
+    height: 100%;
+}
+
+.right a{
+color: #111;
+}
+
+#card{
+    position: absolute;
+    overflow: hidden;
+    border-radius: 50px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+}
+.card1{
+    width: 200px;
+    height: 280px;
+    left: 8%;
+    top: 32%;
+    background-image: url(https://s.pinimg.com/webapp/left-511a9304.png);
+}
+.card2{
+    width: 290px;
+    height: 450px;
+    left: 18%;
+    top: 25%;
+    background-image: url(https://s.pinimg.com/webapp/center-77497603.png);
+}
+.card3{
+    width: 190px;
+    height: 230px;
+    left: 30%;
+    top: 17%;
+    margin-right: 120px;
+    background-image: url(https://s.pinimg.com/webapp/topRight-d0230035.png);
+}
+.card4{
+    width: 180px;
+    height: 270px;
+    left: 31.5%;
+    top: 21%;
+    margin-top: 300px;
+    background-image: url(https://s.pinimg.com/webapp/right-88044782.png);
+}
+.left button{
+    position: absolute;
+    padding: 1vw 20px;
+    border-radius: 50px;
+    border: none;
+    left: 16%;
+    top: 49%;
+    font-size: 25px;
+    z-index: 999;
+    color: #6E0F3C;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.left i{
+    color: black;
+    font-weight: 900;
+    font-size: 25px;
+    margin-right: 1vw;
+}
+.rightbox{
+    width: 80%;
+    height: 40%;
+    margin-top: 35%;
+    margin-left: 10%;
+}
+.rightbox h1{
+    text-align: center;
+    font-size: 70px;
+    color: #C31952;
+}
+.rightbox p{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 22px;
+    color: #C31952
+}
+.rightbox button{
+   margin-left: 43%;
+   margin-top: 5%;
+   font-size: 20px;
+   background-color: #C31952;
+   color: #FFFD92;
+   padding: 5px 10px;
+   border-radius: 50px;
+   border: none;
+   font-weight: 600;cursor: pointer;
+}
+.right h2{
+    padding-top: 15px;
+    margin-left: -20px;
+    font-weight: 300;
+    font-size: 20px;
+    cursor: pointer;
+}
+#page3{
+    width: 100%;
+    height: 100%;
+    background-color: #93e5d05f;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    
+}
+.page2_left{
+    width: 50%;
+    height: 100%;
+}
+.center2{
+    width: 80%;
+    height: 50%;
+    margin-top: 35%;
+    margin-left: 10%;
+} 
+
+.center2 h1{   
+    font-size: 70px;
+    text-align: center;
+    color: #006B6C;
+    font-size: 600;
+}
+.center2 p{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 30px;
+    color: #006B6C;
+    word-spacing: 2px;
+
+}
+.center2 button{
+    text-align: center;
+    margin-top: 30px ;
+    margin-left: 40%;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color:#006B6C ;
+    color:  #93e5d0ea;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.page2_right{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+
+#squar{
+    position: absolute;
+    border-radius: 50px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+.square1{
+    width: 400px;
+    height: 420px;
+    top: 8%;
+    background-image: url(https://blog.hubspot.com/hubfs/Pinterist.jpg);
+
+}
+.square2{
+    width: 230px;
+    height: 230px;
+    top: 70%;
+    left: 19%;
+    background-image: url(https://s.pinimg.com/webapp/serve-my-drinks-263547ea.png);
+}
+.square3{
+    width: 240px;
+    height: 230px;
+    left: 60%;
+    top: 8%;
+    background-image: url(https://i.pinimg.com/originals/af/d4/c0/afd4c0cfb83632320d87da8bc04c4708.jpg);
+}
+.square4{
+    width: 180px;
+    height: 170px;
+    left: 58%;
+    top: 48%;
+    background-image: url(https://images.trex.com/is/image/trexcompany/enh-wardensville-38-cb-enh-railing-bk-adirondacks-wet-sitting-talent?$fullwidthgallery$);
+}
+.square5{
+    width: 200px;
+    height: 200px;
+    left: 54%;
+    top: 76%;
+    background-image: url(https://i.pinimg.com/originals/a7/52/5e/a7525e9638a0eb882cd94aec0a100b30.jpg);
+}
+
+.page2_right h1{
+    position: absolute;
+    top: 83%;
+    left: 23%;
+    color: white;
+}
+.page2_right h2{
+    position: absolute;
+    left: 65%;
+    top: 22%;
+    font-size: 30px;
+    color: white;
+}
+.page2_right h3{
+    position: absolute;
+    left: 60%;
+    top: 62%;
+    color: white;
+    font-size: 25px;
+
+}
+.page2_right h4{
+    position: absolute;
+    left: 56%;
+    top: 86%;
+    font-size: 30px;
+    color: white;
+
+}
+#page4{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+.leftpart{
+    width: 50%;
+    height: 100%;
+    background-image: url(https://s.pinimg.com/webapp/shop-bd0c8a04.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+.leftcenter{
+    width: 14.5%;
+    height: 54%;
+    position: absolute;
+    top: 27%;
+    left: 5%;
+    overflow: hidden;
+    border-radius: 20px;
+    background-image: url(https://s.pinimg.com/webapp/creator-pin-img-491ebb56.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    background-color: #92e2ff;
+    border-radius: 50%;
+    background-image: url(https://s.pinimg.com/webapp/creator-avatar-d7a05622.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 70%;
+    left: 2%;
+
+
+}
+.leftpart p{
+    position: absolute;
+    top: 82%;
+    left: 10%;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.rightpart{
+    width: 50%;
+    height: 100%;
+    background-color: #FFE2EB;
+
+}
+#center1{
+    width: 70%;
+    height: 50%;
+    margin-top: 30%;
+    margin-left: 15%;
+}
+#center1 h1{
+    text-align: center;
+    font-size: 70px;
+    color: rgb(199, 40, 40);
+    word-spacing: 10px;
+}
+#center1 p{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px;
+    color:rgb(199, 40, 40) ;
+    cursor: pointer;
+    word-spacing: 2px;
+}
+#center1 button{
+    margin-top: 25px;
+    margin-left: 45%;
+    padding: 13px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color:rgb(199, 40, 40) ;
+    color:#FFE2EB ;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#page5{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    /* align-items: center; */
+    position: relative;
+    overflow: hidden;
+}
+
+#page5 #book{
+    width: 250px;
+    height: 350px;
+    position: absolute;
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.book1{
+    left: 11.5%;
+    top: -23%;
+    background-image: url(https://images.unsplash.com/photo-1690131871420-110d5e9594f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDl8eGpQUjRobGtCR0F8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+}
+.book2{
+   
+    top: 3%;
+    left: -6%;
+    background-image: url(https://images.unsplash.com/photo-1606755962773-d324e0a13086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNwaWN5JTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    
+
+}
+.book3{
+    top: 53%;
+    left: -6%;
+    background-image: url(https://images.unsplash.com/photo-1684561607487-565ddc54d58f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDg5fHhqUFI0aGxrQkdBfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+}
+
+.book4{
+    left: 11.5%;
+    top: 27%;
+    background-image: url(https://images.unsplash.com/photo-1562565651-7d4948f339eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNwaWN5JTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+}
+.book5{
+    left: 11.5%;
+    top: 77%;
+    background-image: url(https://images.unsplash.com/photo-1681579289875-6c1b0f2129f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwOHx4alBSNGhsa0JHQXx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60);
+
+}
+.book6{
+    left: 29%;
+    top: -30%;
+    background-image: url(https://images.unsplash.com/photo-1667895210591-d999b9b6fecc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyM3x4alBSNGhsa0JHQXx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60);
+}
+.book7{
+   
+    left: 29%;
+    top: 20%;
+    background-image: url(https://images.unsplash.com/photo-1612927601601-6638404737ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZvb2QlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=6);
+  
+}
+.book8{
+    left:29% ;
+    top: 70%;
+    background-image: url(https://images.unsplash.com/photo-1690016451497-47bde99d6f3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE2fHhqUFI0aGxrQkdBfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+}
+.book9{
+    left: 46.5%;
+    top: 2%;
+    background-image: url(https://images.unsplash.com/photo-1615719413546-198b25453f85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vZCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60);
+}
+.book10{
+    left: 46.5%;
+    top: 52%;
+    background-image: url(https://images.unsplash.com/photo-1622715395486-08183374570a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2Ftb3NhfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
+}
+.book11{
+    left: 64%;
+    top: -20%;
+    background-image: url(https://images.unsplash.com/photo-1611309454921-16cef3438ee0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZvb2QlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
+}
+.book12{
+    left: 64%;
+    top: 29.5%;
+    background-image: url(https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZvb2QlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
+}
+.book13{
+    left: 64%;
+    top: 79%;
+    background-image: url(https://images.unsplash.com/photo-1685633224598-1a6d02a1916c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDY1fHhqUFI0aGxrQkdBfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+}
+.book14{
+    left: 81.5%;
+    top: -10%;
+    background-image: url(https://images.unsplash.com/photo-1687244452791-d7082811e658?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQzfHhqUFI0aGxrQkdBfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+}
+.book15{
+    left: 81.5%;
+    top: 39.5%;
+    background-image: url(https://images.unsplash.com/photo-1687838276983-1e09d460e2c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIzfHhqUFI0aGxrQkdBfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+}
+.book16{
+    left: 81.5%;
+    top: 89%;
+    background-image: url(https://images.unsplash.com/photo-1636522637419-50322e27b0a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEzNnx4alBSNGhsa0JHQXx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60);
+}
+#overlay2{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.338);
+    position: absolute;
+
+}
+#page5 h1{
+    position: absolute;
+    font-size: 80px;
+    color: white;
+    top: 50%;
+    left: 10%;
+}
+#last{
+    width: 100%;
+    height: 5%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+#last:hover{
+    text-decoration: underline;
+}

@@ -23,6 +23,7 @@
 
   <div class="main">
     <% posts.forEach(function(e){ %>
+      <a href="/details/e._id">
       <div class="cards">
         <div class="img-div">
           <img height="200px" src="/images/uploads/<%= e.postImage%>" alt="">
@@ -31,8 +32,8 @@
         <h3>Description: <%= e.description %> </h3>
         <h2><%= user.username%> </h2>
         
-
       </div>
+    </a>
       <% }) %>
 
   </div>

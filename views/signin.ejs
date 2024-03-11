@@ -1,0 +1,27 @@
+<%- include("header.ejs")%>
+<link rel="stylesheet" href="stylesheets/login.css">
+
+
+  <div class="container">
+    <div class="content">
+        <!--pinterest logo-->
+        <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
+        <p class="header">Log in to Your Account</p>
+
+      <form action="/register" method="post">
+        <input type="text" name="username" placeholder="Enter user name" class="detail"> <br> <br>
+        <input type="text" name="fullname" placeholder="Enter your full name" class="detail"> <br> <br>
+        <input type="email" name="email" placeholder="Enter your email" class="detail"> <br> <br>
+        <input type="number" name="contect" placeholder="Enter your contect" class="detail"> <br> <br>
+        <input type="password" name="password" placeholder="Enter your password" class="detail"> <br> <br>
+        <button class="btn int">Create Account</button> <br><br>
+      </form>
+      
+      <h2>if! You Don't have An Account </h2> 
+      <a id="login" href="/login">login</a>
+     
+    </div>
+  </div>
+  <%- include("footer.ejs")%>
+
+
