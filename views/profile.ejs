@@ -1,4 +1,5 @@
 <%- include("header.ejs")%>
+<%- include('nav') %>
   <link rel="stylesheet" href="stylesheets/profile.css">
   <div class="main">
 
@@ -7,14 +8,6 @@
       <button>upload</button>
     </form>
 
-    <nav>
-      <a href="/profile">Profile</a>
-      <a href="/show/posts">My Posts</a>
-      <a href="/feed">Feed</a>
-      <a href="/addpost">Add New Post</a>
-      <a href="/reset">Reset</a>
-      <a id="logout" href="/logout">Log out</a>
-    </nav>
 
     <div class="profiledata">
       <div class="img-div">
@@ -23,8 +16,7 @@
         <button id="uploadfile">✏️</button>
       </div>
       <div class="text-div">
-        <h2>@ <%= admin.username %></h2>
-        <h3><%= admin.fullname %></h3>
+        <h2><i class="ri-pinterest-fill"></i> <%= admin.username %></h2>
         <a href="/updateprofile/<%= user._id%>">Edit Profile</a>
 
       </div>

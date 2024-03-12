@@ -9,26 +9,6 @@ html, body{
     color: #000;
 }
 
-nav{
-    width: 100%;
-    background-color: rgba(60, 55, 55, 0.508);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: .6vw 4vw;
-}
-
-#logout{
-    background-color: red;
-    padding: .3vw .8vw;
-    border-radius: .3vw;
-}
-
-nav a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2vw;
-}
 
 .profiledata{
     margin-top: 2vw;
@@ -57,8 +37,11 @@ text-align: center;
     object-fit: cover;
 }
 
-.text-div h3{
+
+
+.text-div h2{
     margin: 1vw;
+    opacity: .6;
 }
 
 .text-div a{

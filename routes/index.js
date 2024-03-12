@@ -8,7 +8,8 @@ const localStrategy = require('passport-local');
 const passport = require('passport');
 // passport.use(new localStrategy(userModel.authenticate()));
 passport.use(userModel.createStrategy());
-const {sendMail} = require('../utils/sendmail')
+const {sendMail} = require('../utils/sendmail');
+const { render } = require('ejs');
 
 
 router.get('/', function (req, res, next) {
@@ -62,7 +63,6 @@ function isLoggedIn(req, res, next) {
   res.redirect('/login');
 };
 
-
 router.get('/profile', isLoggedIn, async function (req, res, next) {
   try {
     // const user = await userModel.findOne({ username: req.session.passport.user }).populate("posts")
@@ -73,7 +73,6 @@ router.get('/profile', isLoggedIn, async function (req, res, next) {
     res.send(error);
   };
 });
-
 
 router.post('/upload', upload.single('image'), isLoggedIn, async function (req, res, next) {
   try {
@@ -107,7 +106,6 @@ router.post('/updateprofile/:id', isLoggedIn, upload.single('image'), async func
     res.send(error)
   }
 })
-
 
 router.get('/addpost', isLoggedIn, function (req, res, next) {
   res.render('addpost', { admin: req.user });
@@ -244,5 +242,17 @@ router.post('/reset', async function(req, res, next){
     res.send(error);
 }
 });
+
+
+router.get('/details/:id', async function(req, res,  next){
+ try {
+  const user = await userModel.findById(req.user)
+  const posts = await postModel.findById(req.params.id).populate('user')
+  res.render("details", {posts, user, admin: req.user })
+  console.log(user);
+ } catch (error) {
+  res.send(error)
+ }
+})
 
 module.exports = router;

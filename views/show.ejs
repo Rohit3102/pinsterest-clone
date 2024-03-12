@@ -1,15 +1,10 @@
 <%- include("header.ejs")%>
+<%- include("nav")%>
 
   <link rel="stylesheet" href="/stylesheets/show.css">
 
   <div id="main">
-    <nav>
-      <a href="/profile">Profile</a>
-      <a href="/show/posts">My Posts</a>
-      <a href="/feed">Feed</a>
-      <a href="/addpost">Add New Post</a>
-      <a id="logout" href="/logout">Log out</a>
-    </nav>
+  
 
     <h1>Username: <%= admin.username%></h1>
     <h1>Your total post <%= user.posts.length%></h1>

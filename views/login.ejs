@@ -1,45 +1,72 @@
 <%- include("header.ejs")%>
   <link rel="stylesheet" href="stylesheets/login.css">
 
-  <div class="container">
-    <div class="content">
-        <!--pinterest logo-->
-        <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
-
-        <p class="header">Log in to Your Account</p>
-
-      <form action="/login" method="post">
-        <input type="email" name="email" placeholder="Enter user email" class="detail"> 
-        <input type="password" name="password" placeholder="Enter your password" class="detail"> 
-        <h4><a href="/forget">Forgot your password?</a></h4>
-        <button class="btn int">log in</button>
-      </form>
-
-      <h2>if! You Don't have An Account </h2> 
-      <p class="or">OR</p>
-      <button class="btn fbk">
-        <i class="fab fa-facebook fa-lg"style="color: white; padding-right: 10px"></i><a href="#">Continue with Facebook</a></button>
-      <button class="btn ggl">
-        <i
-          class="fab fa-google"
-          style="color: rgb(11, 241, 22); padding-right: 10px"
-        ></i
-        ><a href="#">Continue with Google</a>
-      </button>
+  
 
 
-      
-      <footer>
-        <p>
-          By continuing, you agree to Pinterest's
-          <b>Terms of Service, Privacy policy.</b>
-        </p>
-        <hr />
-        <p><a id="signin" href="/">Not on Pinterest yet? Sign up</a></p>
-      </footer>
-      
+  <div id="page5">
+    <div id="book" class="book1"></div>
+    <div id="book" class="book2"></div>
+    <div id="book" class="book3"></div>
+    <div id="book" class="book4"></div>
+    <div id="book" class="book5"></div>
+    <div id="book" class="book6"></div>
+    <div id="book" class="book7"></div>
+    <div id="book" class="book8"></div>
+    <div id="book" class="book9"></div>
+    <div id="book" class="book10"></div>
+    <div id="book" class="book11"></div>
+    <div id="book" class="book12"></div>
+    <div id="book" class="book13"></div>
+    <div id="book" class="book14"></div>
+    <div id="book" class="book15"></div>
+    <div id="book" class="book16"></div>
+    <div id="overlay2">
+      <div class="container">
+        <div class="content">
+            <!--pinterest logo-->
+            <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
+    
+            <p class="header">Log in to Your Account</p>
+    
+          <form action="/login" method="post">
+            <input type="email" name="email" placeholder="john@gmail.com" class="detail"> 
+            <input type="password" name="password" placeholder="Enter your password" class="detail"> 
+            <h4><a href="/forget">Forgot your password?</a></h4>
+            <button class="btn int">log in</button>
+          </form>
+    
+          <h2>if! You Don't have An Account </h2> 
+          <p class="or">OR</p>
+          <button class="btn fbk">
+            <i class="fab fa-facebook fa-lg"style="color: white; padding-right: 10px"></i><a href="#">Continue with Facebook</a></button>
+          <button class="btn ggl">
+            <i
+              class="fab fa-google"
+              style="color: rgb(11, 241, 22); padding-right: 10px"
+            ></i
+            ><a href="#">Continue with Google</a>
+          </button>
+    
+    
+          
+          <footer>
+            <p>
+              By continuing, you agree to Pinterest's
+              <b>Terms of Service, Privacy policy.</b>
+            </p>
+            <hr />
+            <p><a id="signin" href="/signin">Not on Pinterest yet? Sign up</a></p>
+          </footer>
+          
+        </div>
+      </div>
     </div>
-  </div>
+    
+
+
+
+</div>
 
   <%- include("footer.ejs")%>
 

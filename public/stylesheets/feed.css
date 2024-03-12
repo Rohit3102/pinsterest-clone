@@ -14,18 +14,11 @@ html, body{
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 2vw 4vw;
+    padding: 2vw 1vw;
 }
-#main>h1{
-    text-align: center;
-    margin: 1vw 0;
-}
-
 .main a{
   text-decoration: none;
 }
-
-
 nav{
     width: 100%;
     background-color: rgb(60, 55, 55);
@@ -48,54 +41,22 @@ nav a{
 }
 
 .cards{
-    /* margin-top: 2vw ; */
-    margin: 0 1vw;
-    width: 15vw;
-    height: 65vh;
+    margin: 1vw .5vw;
+    width: 23vw;
+    height: 60vh;
     position: relative;
-    /* background-color: salmon; */
 }
 
 .img-div{
     border-radius: .4vw;
     overflow: hidden;
     width: 100%;
-    height: 60%;
+    height: 100%;
 }
 
 .img-div img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.cards h1{
-    margin: 1vw 0;
-    font-size: 1.2vw;
-    width: 12vw;
-}
-.cards h2{
-    /* margin: .1vw 0; */
-    font-size: 1vw;
-    opacity: .7;
-}
-
-.cards h6{
-    margin: 1vw 0;
-    font-size: 1.2vw;
-}
-
-.cards>a{
-    text-decoration: none;
-    color: #fff;
-    padding: .3vw 1vw;
-    background-color: red;
-    border-radius: .3vw;
-    font-size: 1.2vw;
-}
-
-#del{
-    background-color: rgb(100, 247, 100);
-    color: black;
-    margin-left: 3.5vw;
+    object-position: center;
 }
