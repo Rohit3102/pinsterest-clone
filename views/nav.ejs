@@ -1,128 +1,136 @@
-<style>
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 5%;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 99;
-    color: #111111;
-    background-color: white;
-  }
-  
-  .icon {
-    height: 32px;
-    width: 32px;
-  }
-  
-  .search-icon {
-    height: 24px;
-    width: 24px;
-    margin-right: 10px;
-  }
-  
-  ul {
-    list-style-type: none;
-    display: flex;
-    padding: 0px 10px;
-    align-items: center;
-  }
-  
-
-
-li a{
-    font-size: 17px;
-      padding: 15px 15px;
-    text-decoration: none;
-    color: #111111;
-    transition: all ease .5s;
-  }
-  
-  .search-bar {
-    display: flex;
-    width: 50%;
-    padding-left: 25px;
-    align-items: center;
-    background-color: #e9e9e9;
-    border-radius: 32px;
-    height: 50px;
-  }
-  
-  .nav-icon {
-    margin: 0px 8px;
-    height: 28px;
-    width: 28px;
-  }
-  
-  .nav-icons {
-    margin-left: 10px;
-  }
-  
-  .arrow-icon {
-    width: 32px;
-    height: 32px;
-  }
-  
-  li:hover a{
-    background-color: #111111;
-    color: #e9e9e9;
-    padding: 15px 15px;
-    border-radius: 25px;
-    cursor: pointer;
-  }
-  
-  input {
-    border: none;
-    outline: none;
-    background: none;
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-  
-  img {
-    border-radius: 10px;
-  }
-  
-  img:hover {
-    filter: brightness(0.7);
-    cursor: pointer;
-  }
-
-  #logout{
-    padding: .5vw 1vw;
-    font-size: 17px;
-    text-decoration: none;
-    color: #fff;
-  }
-</style>
+<link rel="stylesheet" href="/stylesheets/nav.css">
 
 
 <div class="header">
-    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pinterest-round-color-icon.png" class="icon pinterest-icon">
-    <ul class="navigation">
-      <li><a href="/profile">Profile</a></li>
-      <li><a href="/show/posts">My Posts</a></li>
-      <li><a href="/addpost">Create Post</a></li>
-      <li><a href="/feed">Feed</a></li>
-    </ul>
-    <div class="search-bar">
+  <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pinterest-round-color-icon.png"
+    class="icon pinterest-icon">
+  <ul class="navigation">
+    <li><a href="/profile">Profile</a></li>
+    <li><a href="/show/posts">My Posts</a></li>
+    <li><a href="/addpost">Create Post</a></li>
+    <li><a href="/feed">Feed</a></li>
+   
+  </ul>
+  <div class="search-bar">
     <!-- add search icon -->
-      <input type="text" placeholder="Search">
-    </div>
-    <div class="nav-icons">
-
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/bell-icon.png" class="icon nav-icon">
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/speech-bubble-black-icon.png" class="icon nav-icon">
-      <a id="logout" href="/logout">Log out</a>
-    </div>
+    <input type="text" placeholder="Search">
   </div>
+  <div class="nav-icons">
+
+    <i class="ri-notification-2-fill"></i>
+    <i class="ri-message-2-fill"></i>
+    <a href="/profile">
+      <img src="/images/uploads/<%= user.profileImage%>" alt="">
+    </a>
+     <i id="hamburIcon" class="ri-arrow-down-s-line"></i>
+
+  </div>
+</div>
+
+
+<!-- -----------------------SIDE BAR--------------------------------- -->
+<aside id="asideMenu">
+  <div id="asideProfile">
+      <span class="profilePicture">
+        <img src="/images/uploads/<%= user.profileImage%>" alt="">
+      </span>
+      <div id="personalInfo">
+          <span id="personal"><%= user.username%></span>
+          <span id="personalDetail"><%= user.email%><i class="yAVqVg"> </i> 
+      </div>
+  </div>
+  <div class="proBtn">
+      <button type="button">Your account</button>
+  </div>
+  <ul class="asideUl">
+      <a class="asideList" href="/feed">
+        <i class="ri-home-4-fill"></i>
+        <span class="asideListSpan">Home</span>
+      </a>
+
+      <a class="asideList" href="/profile">
+        <i class="ri-map-pin-user-fill"></i>
+        <span class="asideListSpan">Your Profile</span>
+      </a>
+
+      <a class="asideList" href="/addpost">
+        <i class="ri-image-add-fill"></i>
+        <span class="asideListSpan">Add New Posts</span>
+      </a>
+
+      <a class="asideList" href="/show/posts">
+        <i class="ri-eye-line"></i>
+        <span class="asideListSpan">See Your Posts</span>
+      </a>
+   
+
+  </ul>
+  <div class="proBtn">
+    <button type="button">Your account</button>
+</div>
+
+  <ul class="asideUl2">
+
+  <a class="asideList">
+    <span class="asideListSpan">tune your home feed</span>
+  </a>
+
+  <a class="asideList">
+    <span class="asideListSpan">Install the Windows app</span>
+  </a>
+
+  <a class="asideList">
+    <span class="asideListSpan">Your privacy right</span>
+  </a>
+
+  <a class="asideList">
+    <span class="asideListSpan">Get help</span>
+    <i class="ri-external-link-line"></i>
+  </a>
+
+  <a class="asideList">
+    <span class="asideListSpan">See term of service</span>
+    <i class="ri-external-link-line"></i>
+  </a>
+
+  <a class="asideList">
+    <span class="asideListSpan">See privacy policy</span>
+    <i class="ri-external-link-line"></i>
+  </a>
+
+  <a class="asideList">
+    <span class="asideListSpan">Be a beta tester</span>
+    <i class="ri-external-link-line"></i>
+  </a>
+  <a class="asideList" href="/reset">
+    <span class="asideListSpan">Change Your Password</span>
+  </a>
+  </ul>
+  <div id="logout">
+    <a href="/logout">
+     <button type="button">Logout</button>
+    </a>
+ </div>
+
+  
+</aside>
+
+
+<script>
+  let hamburIcon = document.getElementById('hamburIcon');
+let asideMenu = document.getElementById("asideMenu");
+let menuItem = document.getElementsByClassName("menuItem")
+let headerUl = document.querySelector("#headerUl"); 
+let moreMenu = document.getElementById("moreMenu")
+let menuClicked = false;
+
+hamburIcon.addEventListener("click", () => {
+    menuClicked = !menuClicked;
+
+    if (!menuClicked) {
+        asideMenu.style.display = "none";
+    } else {
+        asideMenu.style.display = "flex";
+    }
+})
+</script>

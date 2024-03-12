@@ -1,17 +1,4 @@
-<%- include("header.ejs")%>
-<%- include("nav.ejs")%>
-
-<style>
-  *{
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-  }
-  html, body{
-      width: 100%;
-      height: 100%;
-  }
-  #main {
+#main {
 font-family: Arial, sans-serif;
 background-color: #f4f4f4;
 margin: 0;
@@ -42,8 +29,6 @@ align-items: stretch;
 
 input[type="file"],
 input[type="text"],
-input[type="email"],
-input[type="number "],
 textarea {
 padding: 10px;
 margin-bottom: 10px;
@@ -74,22 +59,3 @@ text-decoration: none;
 margin-left: 10px;
 text-align: center;
 }
-</style>
-
-<div id="main">
-    <div class="container">
-
-    <h1>Update Your profile</h1>
-
-    <form id="uploadform" action="/updateprofile/<%= profile._id%>?" method="post">
-        <input value="<%= profile.username%>" type="text" name="username" placeholder="Enter user name"> <br> <br>
-        <input value="<%= profile.email%>" type="email" name="email" placeholder="Enter your email"> <br> <br>
-        <input value="<%= profile.contact%>" type="number" name="contect" placeholder="Enter your contect"> <br> <br>
-        <button>update profile</button>
-    </form>
-</div>
-</div>
-
-
-
-    <%- include("footer.ejs")%>

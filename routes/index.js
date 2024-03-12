@@ -89,8 +89,9 @@ router.post('/upload', upload.single('image'), isLoggedIn, async function (req, 
 
 router.get('/updateprofile/:id', isLoggedIn, async function (req, res, next) {
   try {
+    const user = await userModel.findOne(req.user)
     const profile = await userModel.findOne({_id:req.params.id})
-    res.render('updateprofile', { admin: req.user, profile });
+    res.render('updateprofile', {user, admin: req.user, profile });
   } catch (error) {
     res.send(error)
     console.log(error);
@@ -107,8 +108,9 @@ router.post('/updateprofile/:id', isLoggedIn, upload.single('image'), async func
   }
 })
 
-router.get('/addpost', isLoggedIn, function (req, res, next) {
-  res.render('addpost', { admin: req.user });
+router.get('/addpost', isLoggedIn, async function (req, res, next) {
+  const user = await userModel.findOne( req.user)
+  res.render('addpost', { user, admin: req.user });
 });
 
 router.post('/createpost', isLoggedIn, upload.single("postImage"), async function (req, res, next) {
@@ -161,8 +163,9 @@ router.get('/delete/:id', isLoggedIn, async function (req, res, next) {
 
 router.get('/updatepost/:id', isLoggedIn, async function (req, res, next) {
   try {
+    const  user = await userModel.findOne(req.user)
     const post = await postModel.findOne({_id: req.params.id})
-    res.render('updatepost', { admin: req.user, data:post });
+    res.render('updatepost', {user, admin: req.user, data:post });
   } catch (error) {
     res.send(error)
     console.log(error);
@@ -226,8 +229,13 @@ router.post('/forget/:id', async function(req, res, next){
   };
 });
 
-router.get('/reset', function(req, res, next) {
-  res.render('reset', {admin:req.user});
+router.get('/reset', isLoggedIn, async function(req, res, next) {
+  try {
+    const user = await userModel.findOne( req.user)
+  res.render('reset', {user, admin:req.user});
+  } catch (error) {
+    res.send(error)
+  }
 });
 
 router.post('/reset', async function(req, res, next){
@@ -254,5 +262,7 @@ router.get('/details/:id', async function(req, res,  next){
   res.send(error)
  }
 })
+
+
 
 module.exports = router;
