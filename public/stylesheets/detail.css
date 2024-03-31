@@ -39,7 +39,7 @@
   }
 
   .description_block {
-      width: 25%;
+      width: 100%;
       padding: 20px 15px;
   }
 
@@ -65,4 +65,36 @@
       z-index: 00999;
       left: 1%;
       background-color: #f2f2f2ae;
+  }
+
+  .description_block a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.description_block button{
+    border: none;
+    padding: .4vw 1vw;
+    background-color: #3d3d3d;
+    border-radius: .4vw;
+}
+  @media (max-width: 600px) {
+
+    .image_description {
+        display: block;
+    }
+  
+    .image_block {
+        width: 100%;
+        height: 55vh;
+    } 
+    .description_block {
+        width: 100%;
+    }
+
+
+    .description_block button{
+        border: none;
+        padding: 3vw 1rem;
+        background-color: #3d3d3d;
+    }
   }

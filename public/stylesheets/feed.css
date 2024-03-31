@@ -19,27 +19,6 @@ html, body{
 .main a{
   text-decoration: none;
 }
-nav{
-    width: 100%;
-    background-color: rgb(60, 55, 55);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: .6vw 4vw;
-}
-
-#logout{
-    background-color: red;
-    padding: .3vw .8vw;
-    border-radius: .3vw;
-}
-
-nav a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2vw;
-}
-
 .cards{
     margin: 1vw .5vw;
     width: 23vw;
@@ -59,4 +38,10 @@ nav a{
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+@media (max-width: 600px) {
+       .cards{
+        width: 96vw;
+    }  
 }

@@ -67,15 +67,14 @@ nav a{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: relative;
 }
 
 .cards h1{
     margin: 1vw 0;
     font-size: 1.2vw;
-    width: 12vw;
 }
 .cards h2{
-    /* margin: .1vw 0; */
     font-size: 1vw;
     opacity: .7;
 }
@@ -87,15 +86,41 @@ nav a{
 
 .cards>a{
     text-decoration: none;
-    color: #fff;
+    background-color: #ffffffa1;
+    color: #000000;
     padding: .3vw 1vw;
-    background-color: red;
     border-radius: .3vw;
-    font-size: 1.2vw;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 40%;
 }
-
 #del{
-    background-color: rgb(100, 247, 100);
-    color: black;
-    margin-left: 3.5vw;
+    right: .5%;
+}
+@media (max-width: 600px) {
+    .main{
+        display: inline;
+    }
+    .cards{
+        width: 97vw;
+    }
+    .img-div{
+        width: 100%;
+        height: 75%;
+    }
+    .cards h1{
+        font-size: 1.2rem;
+    }
+    .cards h2{
+        font-size: 1rem;
+    }
+    .cards h6{
+        font-size: 1.2rem;
+    }
+    .cards>a{
+        padding: .3rem 1rem;
+        border-radius: 1vw;
+        font-size: 1.5rem;
+        bottom: 25%;
+    }
 }

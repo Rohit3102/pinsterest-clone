@@ -1,7 +1,6 @@
 <%- include('header')%>
 <%- include("nav")%>
-<link rel="stylesheet" href="stylesheets/detail.css">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href='/stylesheets/detail.css'>
 
 
 
@@ -15,7 +14,8 @@
         <div class="description_block">
           <div class="title">Title: <%= posts.title %></div>
           <div class="content">Description: <%= posts.description %> </div>
-         
+         <button ><a href="/images/uploads/<%= posts.postImage%>" download="pin">Download <i class="ri-download-2-line"></i></a></button>
+
         </div>
       </div>
   </div><%- include('footer')%>

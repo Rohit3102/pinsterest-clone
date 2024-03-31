@@ -613,3 +613,204 @@ color: #111;
 #last:hover{
     text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+    #box{
+        width: 100vw;
+        padding: .7rem 0rem;
+    }    
+    .nav1 h1{
+       display: none;
+    }
+    .nav2{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .nav2 h2{
+        display: none;
+    }
+    #center h1{
+        font-size: 3rem;
+        padding-top: 4rem;
+    }
+    #center h2{
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 50px;
+    }
+    #boxes{
+         width: 100%;
+        height: 28%;
+    }
+    #img{
+        height: 260px;
+        border-radius: 4vw;
+    }
+    .box3,.box5{
+        margin-top: 100px;
+    }
+    .box4{
+        margin-top: 250px;
+    }
+    #page2{
+        min-height: 180%;
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+        height: 60%;
+        display: flex;
+        align-items: center;
+    }
+    .right{
+        width: 100%;
+        margin-top: -4vw;
+        height: 50%;
+    }
+    .right a:nth-child(1){
+        color: #111;
+        position: absolute;
+        top: 5vw;
+        left: 40%;
+    }
+    .card1{
+        left: 2%;
+        top: 22%;
+    }
+    .card2{
+        left: 22%;
+        top: 14%;
+    }
+    .card3{
+        left: 33%;
+        top: 7%;
+    }
+    .card4{
+        left: 36%;
+        top: 11%;
+    }
+    .left button{
+        padding: 4vw 30px;
+        left: 15%;
+        top: 35%;
+    }
+    .rightbox{
+        margin-bottom: 75vw;
+    }
+    .rightbox h1{
+        font-size: 10px;
+    }
+    .rightbox p{
+        padding-top: 15px;
+        font-size: 13px;
+    }
+    .rightbox button{
+       margin-left: 33%;
+       margin-top: 15%;
+       font-size: 25px;
+       padding: 15px 20px;
+    }
+    #page3{
+        width: 100%;
+        min-height: 180%;
+        flex-direction: column;
+    }
+    .page2_left{
+        width: 100%;
+        height: 100%;
+        margin-bottom: -49vw;
+    }
+    .center2{
+        width: 80%;
+    } 
+    .center2 h1{
+        font-size: 3rem;
+    }
+    .center2 p{
+        font-size: 1.6rem;
+    }
+    .square1{
+        width: 200px;
+        height: 220px;
+        top: -5%;
+    }
+    .square2{
+        width: 200px;
+        height: 200px;
+        top: 83vw;
+        left: 0%;
+    }
+    .square3{
+        width: 200px;
+        height: 200px;
+        left: 85%;
+        top: 18%;
+    }
+    .square4{
+        left: 80%;
+        top: 60%;
+    }
+    .square5{
+    display: none;
+    }
+    .page2_right h1{
+       display: none;
+    }
+    .page2_right h2{
+        left: 95%;
+        top: 22%;
+    }
+    .page2_right h3{
+        top: 98vw;
+        left: 4%;
+    }
+    .page2_right h4{
+        left: 89%;
+        top: 66%;
+    }
+    #page4{
+        min-height: 100%;
+        flex-direction: column; 
+    }
+    .leftpart{
+        width: 100%;
+    }
+    .leftcenter{
+        width: 18%;
+        height: 30%;
+        top: 20%;
+    }
+    .circle{
+        top: 70%;
+        left: 0%;
+    }
+    .leftpart p{
+        top: 76%;
+        left: 5%;
+        font-size: 10px;
+    }
+    .rightpart{
+        width: 100%;
+    }
+    #center1{
+        width: 70%;
+        height: 50%;
+        margin-top: 30%;
+        margin-left: 15%;
+    }
+    #center1 h1{
+        font-size: 60px;
+        text-align: right;
+    }
+    #center1 p{
+        margin-left: 8%;
+    }
+    #page5 h1{
+        top: 40%;
+    }
+    #last{  
+        display: none;
+    }
+}

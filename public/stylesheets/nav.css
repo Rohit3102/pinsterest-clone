@@ -11,7 +11,6 @@
     width: 100%;
     padding: 10px 2%;
     position: sticky;
-    position: -webkit-sticky;
     top: 0;
     z-index: 99;
     color: #111111;
@@ -70,7 +69,7 @@
     cursor: pointer;
   }
 
-  input {
+  .search-bar input[type="text"] {
     border: none;
     outline: none;
     background: none;
@@ -283,4 +282,79 @@ main {
 
 #LOGOUT A{
   text-decoration: none;
+}
+
+@media (max-width:600px) {
+  .header {
+    padding: 10px 2%;
+  }
+
+  .icon {
+    height: 52px;
+    width: 52px;
+  }
+  li a {
+    display: none;
+  }
+  .search-bar {
+    padding-left: 0px;
+    padding-top: .6rem;
+  }
+  .search-bar input{
+    font-size: 1.3rem;
+  }
+  .nav-icons a{
+    font-size: 4rem;
+    text-decoration: none;
+    color: #111111;
+    transition: all ease .5s;
+  }
+  .nav-icons i{
+    font-size: 2rem;
+  }
+  .nav-icons i:nth-child(1){
+    display: none;
+  }
+  .nav-icons i:nth-child(2){
+    display: none;
+  }
+  .nav-icons img{
+   width: 14vw;
+   height: 14vw;
+  }
+  .nav-icons i:hover{
+    font-size: 2rem;
+  }
+aside {
+    top: 95px;
+    width: 90vw;
+}
+.profilePicture img{
+  width: 15vw;
+  height: 15vw;
+}
+#personalInfo #personal {
+    font-size: 1.5rem;
+}
+.proBtn button {
+    padding: 15px ;
+    font-size: 1.2rem;
+}
+.asideUl a i{
+  font-size: 2rem;
+}
+
+.asideUl a {
+    font-size: 1.6em;
+}
+.asideUl2 a i{
+  font-size: 2rem;
+}
+
+.asideUl2 a {
+    font-size: 1.6rem;
+}
+#logout button{
+  font-size: 1.6rem;
+}
 }
