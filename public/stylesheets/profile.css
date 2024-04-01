@@ -1,35 +1,37 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html, body{
+
+html,
+body {
     width: 100%;
     height: 100%;
     color: #000;
 }
 
 
-.profiledata{
+.profiledata {
     margin-top: 2vw;
     display: flex;
     align-items: center;
-    flex-direction: column  ;
+    flex-direction: column;
     gap: 2vw;
     margin-left: 40vw;
     padding: 1vw 1.5vw;
     width: 20%;
-text-align: center;
+    text-align: center;
     /* height: 30vh; */
 }
 
-.img-div{
-    width: 6.5vw;
-    height: 6.5vw;
+.img-div {
+    width: 7.5vw;
+    height: 7.5vw;
     position: relative;
 }
 
-.img-div img{
+.img-div img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -39,12 +41,12 @@ text-align: center;
 
 
 
-.text-div h2{
+.text-div h2 {
     margin: 1vw;
     opacity: .6;
 }
 
-.text-div a{
+.text-div a {
     text-decoration: none;
     padding: .3vw 1vw;
     margin-top: 2vw;
@@ -54,89 +56,135 @@ text-align: center;
     background-color: salmon;
 }
 
-#uploadfile{
+#uploadfile {
     bottom: 0;
     right: 0;
     position: absolute;
-    padding: .5vw .51vw ;
+    padding: .5vw .51vw;
     border: none;
     border-radius: 50%;
 }
 
-.cards{
-    width: 15vw;
-    height: 45vh;
-    background-color: rgb(172, 172, 172);
+.cards {
+    width: 20vw;
+    height: 55vh;
     border-radius: 1vw;
     margin: 1vw;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
 }
 
-.img{
+.overlay {
+    color: #484848;
     width: 100%;
-    height: 80%;
-    padding: .3vw;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(-100%);
+}
+
+.overlay .detials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #7a77776e;
+}
+
+.cards:hover .overlay {
+    transform: translateY(0%);
+}
+
+.img {
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
-.img img{
+.img img {
     border-radius: .9vw;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.cards h1{
+.overlay h1 {
     font-size: 1.2vw;
     padding: .6vw;
+    width: fit-content;
+    border-radius: 50px;
+    color: #ffff;
+    background-color: #595959c4;
 }
 
-.cards a{
+.overlay a {
     font-size: 1vw;
     padding: .6vw;
     text-decoration: none;
-    color: #fff;
+    color: #ffff;
 }
-.cards h2{
+
+.overlay h2 {
     padding: .6vw;
     font-size: 1.2vw;
 }
 
 @media (max-width: 600px) {
 
-    
-    .profiledata{
+
+    .profiledata {
         margin: auto;
         width: 40%;
     }
-    
-    .img-div{
+
+    .img-div {
         width: 25vw;
         height: 25vw;
     }
-    
-    .text-div a{
+
+    .text-div a {
         padding: .3rem 1rem;
         font-size: 1.4rem;
         border-radius: 3vw;
     }
-    
-    .cards{
-        width: 95vw;
-        height: 45vh;
+
+    .cards {
+        width: 98vw;
+        height: 65vh;
         background-color: rgb(238, 238, 238);
         border-radius: 3vw;
         margin: 1vw;
         margin-top: 10vw;
     }
-    
-    .cards a{
-        font-size: 1.2rem;
-        padding: 1vw;
+
+    .overlay a {
+        font-size: 2.4rem;
+        padding: 0vw;
         text-decoration: none;
         color: #474545;
     }
-    .cards h2{
-        padding: .6vw;
-        font-size: 1.5rem;
+
+    .overlay h2 {
+        padding: 1vw;
+        font-size: 2rem;
     }
+    .overlay h1  {
+        padding: 1vw;
+        font-size: 2rem;
+    }
+    
+.overlay {
+    color: #484848;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(0%);
+}
 }

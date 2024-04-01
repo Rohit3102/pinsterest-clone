@@ -14,11 +14,13 @@
           <div class="img-div">
             <img height="200px" src="/images/uploads/<%= e.postImage%>" alt="">
           </div>
+         <div class="detials">
           <h1>Title : <%=e.title%></h1>
-          <h2>Description : <%=e.description%> </h2>
-          <h6>Date: <%= e.date%></h6>
-          <a href="/delete/<%=e._id%>"><i class="ri-delete-bin-6-fill"></i></a>
-          <a id="del" href="/updatepost/<%= e._id%>"><i class="ri-edit-fill"></i></a>
+          <h2>Description : <span> <%=e.description%> </span> </h2>
+          <a href="/delete/<%=e._id%>">Delete <i class="ri-delete-bin-6-fill"></i></a>
+          <a id="del" href="/updatepost/<%= e._id%>">Edit <i class="ri-edit-fill"></i></a>
+         </div>
+
 
         </div>
         <% }) %>

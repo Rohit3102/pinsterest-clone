@@ -148,7 +148,9 @@ router.get('/feed', isLoggedIn, async function (req, res, next) {
     const user = await userModel.findOne( req.user)
     const posts = await postModel.find().populate("user")
     res.render('feed', { user, posts, admin: req.user });
+    console.log(posts);
   } catch (error) {
+    res.send(error)
   }
 });
 

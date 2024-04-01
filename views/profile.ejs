@@ -22,14 +22,21 @@
       </div>
     </div>
 
+   <a href="/show/posts">
     <div class="cards">
+      <div class="overlay">
+       <h1>@ <%= admin.username %></h1>
+       <div class="detials">
+        <h2> Posts '<%= user?.posts?.length%>'</h2>
+        <a href="/show/posts">See All <i class="ri-arrow-right-up-line"></i></a>
+       </div>
+      </div>
       <div class="img">
-        <img src="/images/uploads/<%= user?.posts[0]?.postImage%> " alt="">
+        <img src="/images/uploads/<%= user?.posts[0]?.postImage%> " alt="postImage">
       </div>
 
-      <h2> Your posts "<%= user?.posts?.length%>"</h2>
-      <a href="/show/posts">See All <i class="ri-arrow-right-up-line"></i></a>
     </div>
+   </a>
 
 
     <script>

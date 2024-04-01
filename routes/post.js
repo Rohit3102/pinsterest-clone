@@ -7,7 +7,8 @@ const postModel = mongoose.Schema({
   user: [{
     type: mongoose.Schema.ObjectId,
     ref: "user"
-  }]
+  }],
+  
 });
 
 
